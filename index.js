@@ -42,9 +42,9 @@ function verifyToken(req,res,next){
         req.token=bearerToken
         next();
     }else{
-        res.sendStatus(403);
+        res.sendStatus(403); //Forbidden
     }
 }
 
 
-app.listen(3000,()=> console.log("Authentication server started"))
+app.listen(3000,()=> console.log("Server started"))
