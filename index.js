@@ -11,7 +11,7 @@ app.get("/api",(req,res)=>{
 app.post("/api/posts", verifyToken,(req,res)=>{
     jwt.verify(req.token, "secretkey", (err,authData)=>{
         if(err){
-            res.sendStatus(403);
+            res.sendStatus(403); //forbidden
         }else{
             res.json({
                 message:"POST created",
